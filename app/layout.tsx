@@ -32,7 +32,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className}`} suppressHydrationWarning>
+      <body className={`${font.className}`}>
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider />
