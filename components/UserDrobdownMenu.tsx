@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,9 +7,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { User, useSupabaseClient } from "@supabase/auth-helpers-react";
-import { useRouter } from "next/navigation";
 import { useUser } from "@/hooks/useUser";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 export const UserDrobdownMenu: React.FC = () => {
   const supabaseClient = useSupabaseClient();

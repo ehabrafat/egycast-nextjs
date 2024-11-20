@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import localFont from "next/font/local";
-import { Figtree } from "next/font/google";
 import { Sidebar } from "@/components/Sidebar";
+import ModalProvider from "@/providers/ModalProvider";
 import SupabaseProvider from "@/providers/SupabaseProvider";
 import UserProvider from "@/providers/UserProvider";
-import ModalProvider from "@/providers/ModalProvider";
-import { getCommunities } from "./actions/communities";
+import type { Metadata } from "next";
+import { Figtree } from "next/font/google";
+import localFont from "next/font/local";
+import "./globals.css";
 
 const font = Figtree({ subsets: ["latin"] });
 
