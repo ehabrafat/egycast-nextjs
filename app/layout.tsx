@@ -1,5 +1,6 @@
 import { Sidebar } from "@/components/Sidebar";
 import ModalProvider from "@/providers/ModalProvider";
+import { QueryProvider } from "@/providers/QueryProvider";
 import SupabaseProvider from "@/providers/SupabaseProvider";
 import UserProvider from "@/providers/UserProvider";
 import type { Metadata } from "next";
@@ -35,8 +36,10 @@ export default async function RootLayout({
       <body className={`${font.className}`}>
         <SupabaseProvider>
           <UserProvider>
-            <ModalProvider />
-            <Sidebar>{children}</Sidebar>
+            <QueryProvider>
+              <ModalProvider />
+              <Sidebar>{children}</Sidebar>
+            </QueryProvider>
           </UserProvider>
         </SupabaseProvider>
       </body>

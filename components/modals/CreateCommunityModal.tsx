@@ -24,6 +24,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
+import { queryClient } from "@/providers/QueryProvider";
 
 const formSchema = z.object({
   title: z.string().min(1, "Title is missing"),
@@ -84,6 +85,7 @@ export const CreateCommunityModal = () => {
       console.error("something went wrong");
       return;
     }
+    queryClient.invalidateQueries({ queryKey: ["communities"] });
     form.reset();
     onClose();
     router.refresh();

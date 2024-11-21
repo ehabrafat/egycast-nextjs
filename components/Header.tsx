@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProbs> = ({ className }) => {
   const { user, isLoading } = useUser();
 
   return (
-    <div className={twMerge(`h-fit p-6`, className)}>
+    <div className={twMerge(`h-fit p-4`, className)}>
       <div className="w-full mb-4 flex items-center justify-between">
         <div className="flex md:hidden gpa-x-2 items-center">
           <button className="rounded-full p-2 flex bg-white items-center justify-center hover:opacity-75 transition">
