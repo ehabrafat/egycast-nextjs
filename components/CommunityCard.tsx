@@ -30,7 +30,13 @@ export const CommunityCard: React.FC<CommunityCardProbs> = ({ community }) => {
       <CardContent className="p-4">
         <div className="flex flex-col gap-y-2">
           <h2 className="font-bold">{community.title}</h2>
-          <p>{community.description.substring(0, Math.min(community.description.length, 100))} {community.description.length > 100 ? "..." : ""}</p>
+          <p>
+            {community.description.substring(
+              0,
+              Math.min(community.description.length, 100)
+            )}{" "}
+            {community.description.length > 100 ? "..." : ""}
+          </p>
         </div>
       </CardContent>
       <CardFooter className="mt-auto">
