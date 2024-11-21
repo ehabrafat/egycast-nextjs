@@ -34,7 +34,7 @@ export const CommunityCard: React.FC<CommunityCardProbs> = ({ community }) => {
             {community.description.substring(
               0,
               Math.min(community.description.length, 100)
-            )}{" "}
+            )}
             {community.description.length > 100 ? "..." : ""}
           </p>
         </div>
@@ -42,7 +42,9 @@ export const CommunityCard: React.FC<CommunityCardProbs> = ({ community }) => {
       <CardFooter className="mt-auto">
         <div className="w-full flex items-center justify-between">
           <p>Paid</p>
-          <Button className="w-[100px]">Join</Button>
+          <button className="px-8 py-1 text-base border-2 border-neutral-400 rounded-lg hover:bg-neutral-400/10 transition ">
+            Join
+          </button>
         </div>
       </CardFooter>
     </Card>
